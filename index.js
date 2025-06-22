@@ -6,7 +6,7 @@ const app = express()
 
 app.use(express.json())
 app.use(express.static("dist"))
-app.use(cors({ origin: "https://practice4-sof0.onrender.com" }))
+app.use(cors({ origin: "https://localhost:5173" }))
 app.use("/api/user", require("./routes/user.routes"))
 
 mongoose.connect(process.env.MONGO_URL)
